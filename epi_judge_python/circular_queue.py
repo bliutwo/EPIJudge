@@ -3,8 +3,6 @@ from test_framework.test_failure import TestFailure
 
 
 class Queue:
-    SCALE_FACTOR = 2
-
     def __init__(self, capacity: int) -> None:
         # TODO - you fill in here.
         return
