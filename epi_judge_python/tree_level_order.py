@@ -2,6 +2,7 @@ from typing import List
 
 from binary_tree_node import BinaryTreeNode
 from test_framework import generic_test
+import collections
 
 
 def binary_tree_depth_order(tree: BinaryTreeNode) -> List[List[int]]:
@@ -16,6 +17,7 @@ def binary_tree_depth_order(tree: BinaryTreeNode) -> List[List[int]]:
             child for curr in curr_depth_nodes
             for child in (curr.left, curr.right) if child
         ]
+
     return result
 
 
