@@ -2,8 +2,15 @@ from test_framework import generic_test
 
 
 def evaluate(expression: str) -> int:
-    # TODO - you fill in here.
-    return 0
+    l = expression.split(',')
+    d = {'*': lambda y, x: x * y, '+': lambda y, x: x + y, '-': lambda y, x: x - y, '/': lambda y, x: x // y}
+    stack = []
+    for c in l:
+        if c in d:
+            stack.append(d[c](stack.pop(), stack.pop()))
+        else:
+            stack.append(int(c))
+    return stack[0]
 
 
 if __name__ == '__main__':
