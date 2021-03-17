@@ -13,12 +13,10 @@ class Queue:
         self.forwards.append(x)
 
     def dequeue(self) -> int:
-        while len(self.forwards) > 0:
-            self.backwards.append(self.forwards.pop())
-        ans = self.backwards.pop()
-        while len(self.backwards) > 0:
-            self.forwards.append(self.backwards.pop())
-        return ans
+        if not self.backwards:
+            while len(self.forwards) > 0:
+                self.backwards.append(self.forwards.pop())
+        return self.backwards.pop()
 
 
 def queue_tester(ops):
