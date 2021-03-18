@@ -1,24 +1,23 @@
 from test_framework import generic_test
 from test_framework.test_failure import TestFailure
-import collections
+
 
 class Stack:
-    MaxAndValue = collections.namedtuple('MaxAndValue', ('max', 'value'))
-
-    def __init__(self):
-        self.l = []
-
     def empty(self) -> bool:
-        return len(self.l) == 0
+        # TODO - you fill in here.
+        return True
 
     def max(self) -> int:
-        return self.l[-1].max
+        # TODO - you fill in here.
+        return 0
 
     def pop(self) -> int:
-        return self.l.pop().value
+        # TODO - you fill in here.
+        return 0
 
     def push(self, x: int) -> None:
-        self.l.append(self.MaxAndValue(x, x) if self.empty() else self.MaxAndValue(max(x, self.max()), x))
+        # TODO - you fill in here.
+        return
 
 
 def stack_tester(ops):
