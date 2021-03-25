@@ -2,8 +2,7 @@ from test_framework import generic_test
 
 
 def evaluate(expression: str) -> int:
-    l = expression.split(',')
-    stack = []
+    # TODO - you fill in here.
     return 0
 
 
